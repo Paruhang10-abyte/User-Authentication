@@ -22,3 +22,8 @@ class UserRegister(BaseModel):
         if len(v) < 6:
             raise ValueError("Password must be at least 6 characters")
         return v
+    
+class UserLogin(BaseModel):
+    email: str
+    password: str
+    
