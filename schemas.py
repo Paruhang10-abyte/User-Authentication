@@ -27,3 +27,15 @@ class UserLogin(BaseModel):
     email: str
     password: str
     
+class UserUpdate(BaseModel):
+    username: str | None = None
+    
+class UserEmailUpdate(BaseModel):
+    email: str
+    
+class UserPasswordUpdate(BaseModel):
+    old_password: str
+    new_password: str
+    
+class UserDelete(BaseModel):
+    id: int 
